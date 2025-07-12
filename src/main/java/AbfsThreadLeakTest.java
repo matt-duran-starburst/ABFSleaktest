@@ -208,7 +208,7 @@ public class AbfsThreadLeakTest {
 
         // Add your ABFS configuration here
         conf.set("fs.azure.account.auth.type", "SharedKey");
-        conf.set("fs.azure.account.key.<account_name_here>.dfs.core.windows.net", "YOUR_KEY_HERE");
+        conf.set("fs.azure.account.key.<account_name_here>.dfs.core.windows.net", "<dummy_key>");
 
         // Check if autothrottling is explicitly disabled
         String autothrottling = System.getProperty("fs.azure.enable.autothrottling", conf.get("fs.azure.enable.autothrottling", "true"));
